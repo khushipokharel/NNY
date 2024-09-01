@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient</title>
+    <link rel="stylesheet" href="/assets/css/patient.css" />
+    <link rel="stylesheet" href="/assets/css/shared.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+          <div class="affirmation-slider">
+            <div class="quote active">
+              “I am grateful for the life I am living.”
+            </div>
+            <div class="quote">
+              “I choose to be happy and love myself today.”
+            </div>
+            <div class="quote">
+              “I am in control of my emotions and thoughts.”
+            </div>
+            <div class="quote">“I am becoming the best version of myself.”</div>
+          </div>
+
+          <div class="dots">
+            <span class="dot active" data-quote="0"></span>
+            <span class="dot" data-quote="1"></span>
+            <span class="dot" data-quote="2"></span>
+            <span class="dot" data-quote="3"></span>
+          </div>
+          <div class="goal-for-week">
+            <h2><a href="#" id="goalLink">Your goal for this week:</a></h2>
+            <p id="weeklyGoalText">
+              “I am going to control my alcoholism and shall be more positive.”
+            </p>
+            <button id="setGoalButton">Set a Goal</button>
+          </div>
+
+          <div id="newGoalModal" class="new-modal">
+            <div class="new-modal-content">
+              <span class="close">&times;</span>
+              <h2>Set a New Goal</h2>
+              <form id="goalForm">
+                <label for="goalInput">Goal:</label>
+                <input type="text" id="goalInput" name="goalInput" required />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="goalModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Weekly Goal Details</h2>
+              <p>
+                “I am going to control my alcoholism and shall be more
+                positive.”
+              </p>
+              <button id="completeGoal">Complete</button>
+            </div>
+          </div>
+
+          <div id="congratsMessage" class="congrats-message">
+            <div id="confetti"></div>
+            <h2>Well done, Zoe!</h2>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+          <div class="calendar">
+            <div class="month-navigation">
+              <span id="prevMonth" class="nav-arrow">&lt;</span>
+              <h3 id="currentMonth"></h3>
+              <span id="nextMonth" class="nav-arrow">&gt;</span>
+            </div>
+            <div class="calendar-view">
+              <div class="days">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+                ><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div class="dates" id="calendarDates">
+                <!-- Dates will be dynamically generated here -->
+              </div>
+            </div>
+          </div>
+          <div class="mood-chart">
+            <h3>Your mood recently</h3>
+            <canvas id="moodChart"></canvas>
+          </div>
+        </div>
+      </div>
+      =======
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
+        minima aperiam maxime optio quisquam minus pariatur itaque molestiae
+        nobis deleniti. Modi amet nisi fugit minima, rerum alias necessitatibus
+        provident voluptate velit voluptas. Officiis odit reiciendis rerum
+        voluptatum, necessitatibus nisi iure possimus, beatae blanditiis soluta
+        similique voluptas itaque dolore eum, molestias dignissimos. Distinctio
+        repellat dicta repudiandae earum error autem ipsa, qui perspiciatis
+        voluptatum iste molestias rerum ex officiis nemo voluptas amet
+        dignissimos nam dolor vitae reiciendis necessitatibus? Similique maxime
+        obcaecati magni assumenda aliquam, recusandae quaerat eius ducimus!
+        Iusto hic perspiciatis dolores deleniti itaque ducimus laudantium illum
+        accusamus eos dicta eius nesciunt sunt distinctio, magnam veniam odit,
+        aut amet unde exercitationem? Architecto commodi excepturi est
+        distinctio autem quaerat possimus sapiente eos consectetur nihil vel
+        debitis, tenetur voluptas non mollitia nisi, sint rem. Corporis magnam
+        laudantium distinctio illum repellat ducimus delectus optio soluta iure.
+        Harum unde ipsam, aliquid soluta placeat pariatur eligendi ad,
+        voluptates maxime deleniti non nisi sequi eius doloremque culpa quis!
+        Est asperiores quia dolore aut eveniet aliquid, praesentium dignissimos
+        ab quas incidunt ipsum blanditiis expedita modi impedit minus cupiditate
+        id aliquam sint doloremque totam. Error fuga exercitationem nemo aperiam
+        dolorem? Corrupti quas omnis, consequatur magni beatae inventore earum
+        ad recusandae, ea totam ipsum ipsam ipsa rem repellendus atque eius
+        architecto et a, quia cupiditate molestias! Quaerat error, numquam
+        iusto, pariatur commodi eaque mollitia explicabo architecto ab officiis
+        hic possimus temporibus et modi, a minima assumenda quia veniam nostrum
+        voluptates debitis quo. Tempora, repellat quidem? Voluptate optio
+        tempora reiciendis debitis placeat impedit doloremque provident
+        veritatis maxime est, praesentium itaque nesciunt ea laborum dolorum
+        facilis, unde aspernatur. Eligendi, necessitatibus similique error
+        deserunt repellat illo accusamus aliquam tempora maiores, nostrum modi?
+        Fugiat labore sint iste eligendi possimus obcaecati optio modi quasi
+        maxime. Quae, aliquid. Aliquid quasi, obcaecati praesentium aliquam
+        numquam minus quis facere pariatur consequuntur doloremque culpa
+        repellat autem minima, nisi sint. Recusandae, aliquam perferendis illo
+        quaerat fuga quidem error, ut voluptatem magnam, unde voluptatum.
+        Impedit quam pariatur quia ipsam illo repellendus, vitae facilis quasi
+        quo eligendi nostrum qui expedita vero nisi ipsum odit recusandae nobis
+        nulla culpa. Tenetur harum distinctio placeat corporis accusamus velit
+        fugiat provident, molestias esse officiis aut dolores. Totam accusantium
+        ratione at blanditiis est eum sequi laudantium dolor, praesentium
+        perferendis incidunt, quam dolore odit iusto impedit. In quia esse
+        facilis blanditiis illo, eligendi fuga explicabo commodi, repudiandae
+        deleniti provident dolore. Iusto, voluptatem ducimus minima consequuntur
+        expedita inventore incidunt suscipit nesciunt quaerat at ipsam iure
+        aspernatur voluptatum. Libero quae id perferendis error pariatur quo
+        modi veritatis esse iste fuga aliquid sed tenetur est quis suscipit
+        corrupti fugit molestias minus, fugiat quod dolores dolorem amet
+        accusantium. At voluptate facere voluptatibus repudiandae vel magnam
+        dolor repellendus necessitatibus minus, harum nisi repellat quo autem
+        sed. Fuga eligendi saepe nihil quisquam illum esse eos repudiandae,
+        dolor accusantium deleniti maiores explicabo delectus odit modi, sed at
+        quam? Voluptatibus praesentium mollitia, delectus similique esse quasi
+        totam sint nihil exercitationem quos, quod harum officia recusandae.
+        Quod dolorem delectus deleniti veritatis beatae. Qui adipisci labore
+        neque omnis voluptas.
+      </p>
+      >>>>>>> main
+    </main>
+    <div id="footer"></div>
+    <script src="/components/patient/patient.js"></script>
+  </body>
+</html>
