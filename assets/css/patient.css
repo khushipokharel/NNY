@@ -40,8 +40,8 @@ body {
     font-size: 24px;
     color: #555;
     display: none;
-    text-align: center; /* Center text horizontally */
-    width: 100%; /* Ensure the quote takes full width */
+    text-align: center;
+    width: 100%;
 }
 
 .affirmation-slider .quote.active {
