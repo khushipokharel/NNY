@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journal</title>
+    <link rel="stylesheet" href="../assets/css/patient.css" />
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <div class="container">
+        <!-- Left hand side bar for past journal entries-->
+        <div class="left-side-panel">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchJournal"
+              placeholder="Search entry..."
+            />
+          </div>
+          <div class="journal-list">
+            <h2>Past Journal</h2>
+            <ul id="journalList">
+              <!-- JavaScript will populate this list dynamically -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main panel with journal details -->
+        <div class="main-panel">
+          <div class="add-new-post">
+            <button id="addNewPostBtn">New Post</button>
+          </div>
+
+          <div id="newJournalModal" class="new-journal-modal">
+            <div class="new-modal-content">
+              <span class="close">&times;</span>
+              <h2>What's on your mind?</h2>
+              <form id="journalForm">
+                <label for="journalTitle"></label>
+                <input
+                  type="text"
+                  id="journalTitle"
+                  name="title"
+                  placeholder="Post title"
+                  required
+                /><br />
+                <label for="journalContent"></label>
+                <textarea
+                  id="journalContent"
+                  name="content"
+                  placeholder="Share your thoughts.."
+                  required
+                ></textarea
+                ><br />
+                <button type="submit">Publish</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="journal-details">
+            <h2>Journal Details</h2>
+            <div id="journalDetails">
+              <!-- JavaScript will populate this area dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right panel -->
+        <div class="right-panel">
+          <div class="calendar">
+            <div class="month-navigation">
+              <span id="prevMonth" class="nav-arrow">&lt;</span>
+              <h3 id="currentMonth"></h3>
+              <span id="nextMonth" class="nav-arrow">&gt;</span>
+            </div>
+            <div class="calendar-view">
+              <div class="days">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+                ><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div class="dates" id="calendarDates">
+                <!-- Dates will be dynamically generated here -->
+              </div>
+            </div>
+          </div>
+          <div class="mood-chart">
+            <h3>Your mood recently</h3>
+            <canvas id="moodChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="/components/patient/patient.js"></script>
+    <script src="/components/patient/journal.js"></script>
+  </body>
+</html>

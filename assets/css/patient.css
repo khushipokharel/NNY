@@ -1,289 +1,354 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 .container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .left-panel {
-    width: 66.67%;
-    padding-right: 20px;
+  width: 66.67%;
+  padding-right: 20px;
 }
 
 .right-panel {
-    width: 33.33%;
-    padding-left: 20px;
+  width: 33.33%;
+  padding-left: 20px;
 }
 
 .affirmation-slider {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .affirmation-slider .quote {
-    font-size: 24px;
-    color: #555;
-    display: none;
-    text-align: center; /* Center text horizontally */
-    width: 100%; /* Ensure the quote takes full width */
+  font-size: 24px;
+  color: #555;
+  display: none;
+  text-align: center; /* Center text horizontally */
+  width: 100%; /* Ensure the quote takes full width */
 }
 
 .affirmation-slider .quote.active {
-    display: block;
+  display: block;
 }
 
 .dots {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: #717171;
+  background-color: #717171;
 }
 
 .goal-for-week {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #555;
-    cursor: pointer;
-    position: relative;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+  position: relative;
 }
 
 .goal-for-week h2 {
-    font-size: 18px;
-    color: #555;
+  font-size: 18px;
+  color: #555;
 }
 
 .goal-for-week p {
-    font-size: 20px;
-    color: #555;
-    background-color: #f5c6cb;
-    padding: 10px;
-    border-radius: 5px;
+  font-size: 20px;
+  color: #555;
+  background-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #setGoalButton {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-    bottom: -10px;
-    right: 20px;
-    transform: translateY(100%);
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  transform: translateY(100%);
 }
 
 #setGoalButton:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 10px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .new-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  .new-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.new-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
 .congrats-message {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .congrats-message h2 {
-    color: white;
-    font-size: 36px;
-    margin-top: 20%;
+  color: white;
+  font-size: 36px;
+  margin-top: 20%;
 }
 
 #confetti {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    opacity: 0.8;
-    animation: fall 4s linear infinite;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: fall 4s linear infinite;
 }
 
 @keyframes fall {
-    0% {
-        transform: translateY(-100%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
 .calendar {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .calendar h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .calendar-view {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .calendar .days {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
 .calendar .dates {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
 .calendar .dates span {
-    width: 14%;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 14%;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .month-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .nav-arrow {
-    cursor: pointer;
-    font-size: 24px;
-    user-select: none;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
 }
 
 .calendar .dates span.selected {
-    background-color: #e0e0e0;
-    font-weight: bold;
+  background-color: #e0e0e0;
+  font-weight: bold;
 }
 
 .mood-chart {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .mood-chart h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 #moodChart {
-    max-width: 100%;
-    height: 200px;
+  max-width: 100%;
+  height: 200px;
+}
+
+.left-side-panel {
+  width: 33.33%;
+  padding-right: 20px;
+}
+
+.main-panel {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.add-new-post {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.add-new-post button {
+  padding: 10px 20px;
+  background-color: #a13295;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.journal-list {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.journal-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.journal-list ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.journal-list ul li:hover {
+  background-color: #e0e0e0;
+}
+
+.journal-details {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
