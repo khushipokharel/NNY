@@ -119,6 +119,7 @@ select {
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .next-btn {
@@ -132,7 +133,7 @@ select {
 
 .navbar {
     display: flex;
-    justify-content: space-around; /* 或者使用space-between, center来控制间距 */
+    justify-content: space-between; /* 或者使用space-between, center来控制间距 */
     background-color: #9379ff; /* 设置背景颜色 */
     padding: 10px;
     margin: 0; /* 取消外边距 */
@@ -150,4 +151,31 @@ select {
     background-color: #6f4cff; /* 悬停时的背景颜色 */
     border-radius: 5px; /* 圆角边框 */
 }
+
+.content {
+    margin-left: 20px;
+    padding-left: 0;
+    max-width: 70%; 
+}
+
+table {
+    width: max-content; 
+    margin-left: 20px; 
+    border-collapse: collapse;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 20px;
+}
+
+.note-btn, .next-btn {
+    margin-right: 650px; 
+}
+
+.create-group-btn {
+    margin-left: 20px;
+}
+
 
