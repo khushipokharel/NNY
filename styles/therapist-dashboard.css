@@ -131,26 +131,26 @@ select {
     cursor: pointer;
 }
 
-.navbar {
+/* .navbar {
     display: flex;
-    justify-content: space-between; /* 或者使用space-between, center来控制间距 */
-    background-color: #9379ff; /* 设置背景颜色 */
+    justify-content: space-between; 
+    background-color: #9379ff;
     padding: 10px;
-    margin: 0; /* 取消外边距 */
-    list-style: none; /* 取消项目符号 */
+    margin: 0;
+    list-style: none; 
 }
 
 .navbar a {
     color: white;
-    text-decoration: none; /* 移除下划线 */
+    text-decoration: none; 
     padding: 10px 20px;
     font-size: 16px;
 }
 
 .navbar a:hover {
-    background-color: #6f4cff; /* 悬停时的背景颜色 */
-    border-radius: 5px; /* 圆角边框 */
-}
+    background-color: #6f4cff; 
+    border-radius: 5px;
+} */
 
 .content {
     margin-left: 20px;
