@@ -153,25 +153,25 @@ select {
 }
 
 .content {
-    margin-left: 20px; /* Move the content to the left */
+    margin-left: 20px;
     padding-left: 0;
-    max-width: 70%; /* Make sure it spans the available width */
+    max-width: 70%; 
 }
 
 table {
-    width: max-content; /* Adjust table width as needed */
-    margin-left: 20px; /* Align the table to the left */
+    width: max-content; 
+    margin-left: 20px; 
     border-collapse: collapse;
 }
 
 .footer {
     display: flex;
-    justify-content: flex-start; /* Align the buttons to the left */
+    justify-content: flex-start; 
     margin-top: 20px;
 }
 
 .note-btn, .next-btn {
-    margin-right: 650px; /* Add space between buttons */
+    margin-right: 650px; 
 }
 
 .create-group-btn {
