@@ -19,49 +19,133 @@
               id="searchJournal"
               placeholder="Search entry..."
             />
+            <button type="submit" id="searchJournal">
+              <img
+                src="../assets/images/search-interface-symbol.png"
+                width="15px"
+              />
+            </button>
           </div>
-          <div class="journal-list">
-            <h2>Past Journal</h2>
-            <ul id="journalList">
+          <div class="journalList">
+            <!-- <h2>Past Journal</h2> -->
+            <div id="journalList">
               <!-- JavaScript will populate this list dynamically -->
-            </ul>
+            </div>
           </div>
         </div>
 
         <!-- Main panel with journal details -->
         <div class="main-panel">
           <div class="add-new-post">
-            <button id="addNewPostBtn">New Post</button>
+            <button id="addNewPostBtn" onclick="addnewpost()">New Post</button>
           </div>
-
-          <div id="newJournalModal" class="new-journal-modal">
-            <div class="new-modal-content">
-              <span class="close">&times;</span>
-              <h2>What's on your mind?</h2>
+          <div id="newJournalModal" class="modal">
+            <div class="journal-modal-content">
+              <h3 style="color: rgb(161, 50, 149); text-align: center">
+                What's on your mind?
+                <span class="close">&times;</span>
+              </h3>
+              <div id="line"></div>
               <form id="journalForm">
                 <label for="journalTitle"></label>
                 <input
-                  type="text"
+                  type="title"
                   id="journalTitle"
                   name="title"
                   placeholder="Post title"
                   required
                 /><br />
+                <div id="journalDate"></div>
                 <label for="journalContent"></label>
                 <textarea
                   id="journalContent"
                   name="content"
                   placeholder="Share your thoughts.."
+                  rows="10"
                   required
-                ></textarea
-                ><br />
-                <button type="submit">Publish</button>
+                ></textarea>
+                <br />
+                <div id="moodInput" class="moodInput">
+                  <label for="moodInput">Mood:</label>
+                  <input
+                    style="order: 10"
+                    type="button"
+                    id="btn1"
+                    class="moodbtn"
+                    value="1"
+                  />
+                  <input
+                    style="order: 9"
+                    type="button"
+                    id="btn2"
+                    class="moodbtn"
+                    value="2"
+                  />
+                  <input
+                    style="order: 8"
+                    type="button"
+                    id="btn3"
+                    class="moodbtn"
+                    value="3"
+                  />
+                  <input
+                    style="order: 7"
+                    type="button"
+                    id="btn4"
+                    class="moodbtn"
+                    value="4"
+                  />
+                  <input
+                    style="order: 6"
+                    type="button"
+                    id="btn5"
+                    class="moodbtn"
+                    value="5"
+                  />
+                  <input
+                    style="order: 5"
+                    type="button"
+                    id="btn6"
+                    class="moodbtn"
+                    value="6"
+                  />
+                  <input
+                    style="order: 4"
+                    type="button"
+                    id="btn7"
+                    class="moodbtn"
+                    value="7"
+                  />
+                  <input
+                    style="order: 3"
+                    type="button"
+                    id="btn8"
+                    class="moodbtn"
+                    value="8"
+                  />
+                  <input
+                    style="order: 2"
+                    type="button"
+                    id="btn9"
+                    class="moodbtn"
+                    value="9"
+                  />
+                  <input
+                    style="order: 1"
+                    type="button"
+                    id="btn10"
+                    class="moodbtn"
+                    value="10"
+                  />
+                </div>
+                <div id="line"></div>
+                <input type="submit" value="Publish" />
               </form>
             </div>
           </div>
 
           <div class="journal-details">
-            <h2>Journal Details</h2>
+            <!-- <h2>Journal Details</h2> -->
             <div id="journalDetails">
               <!-- JavaScript will populate this area dynamically -->
             </div>
