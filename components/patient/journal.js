@@ -1,5 +1,4 @@
-// Define the journals array
-const journals = [
+const journalsList = [
   {
     id: 1,
     title: "Productive day at work",
@@ -35,15 +34,16 @@ const journals = [
 ];
 
 // Function to populate the journal list
-function populateJournalList(journals) {
+function populateJournalList(journalsList) {
   const journalList = document.getElementById("journalList");
   journalList.innerHTML = "";
 
-  journals.forEach((journal) => {
+  journalsList.forEach((journal) => {
     // Create a container for each journal entry
     const journalItem = document.createElement("div");
     journalItem.className = "journal-item";
 
+    // Add the title to container
     const titleElement = document.createElement("div");
     journalItem.className = "journal-title";
     journalItem.textContent = journal.title;
@@ -61,7 +61,7 @@ function populateJournalList(journals) {
     // let summary = journal.content.split(" ").slice(0, 10).join(" ") + "...";
     let content = journal.content;
     let summary = content.split(" ").slice(0, 10).join(" ") + "...";
-    console.log(journal.content);
+    // console.log(journal.content);
     contentElement.textContent = summary;
     journalItem.appendChild(contentElement);
 
@@ -76,12 +76,12 @@ function populateJournalList(journals) {
 
 // Ensure the DOM is fully loaded before running the script
 document.addEventListener("DOMContentLoaded", function () {
-  populateJournalList(journals);
+  populateJournalList(journalsList);
 });
 
 // Function to show journal details
 function showJournalDetails(id) {
-  const journal = journals.find((journal) => journal.id === id);
+  const journal = journalsList.find((journal) => journal.id === id);
   if (!journal) return;
 
   const detailsPanel = document.querySelector(".journal-details");
@@ -92,6 +92,34 @@ function showJournalDetails(id) {
       <p>${journal.moodlevel}</p>
       `;
 }
+
+function filterJournals() {
+  const searchInput = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
+  const journalListItems = document.querySelectorAll(
+    "#journalList .journal-title"
+  );
+
+  journalListItems.forEach((item) => {
+    const title = item.textContent.toLowerCase();
+    if (title.includes(searchInput)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+
+//Event listener
+document
+  .getElementById("searchJournal")
+  .addEventListener("click", filterJournals);
+
+//Event listener
+document
+  .getElementById("searchInput")
+  .addEventListener("input", filterJournals);
 
 // Function to handle "Add New Post" button click
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -129,29 +157,12 @@ function saveJournalEntry(event) {
   const content = document.getElementById("journalContent").value;
 
   // Add new journal to the list (for now, we'll just append it)
-  const newJournal = { id: journals.length + 1, title, content };
-  journals.push(newJournal);
+  const newJournal = { id: journalsList.length + 1, title, content };
+  journalsList.push(newJournal);
 
   // Update the journal list and show the new entry
   populateJournalList();
   showJournalDetails(newJournal);
-}
-
-// Function to filter journal list based on search input
-function filterJournals() {
-  const searchInput = document
-    .getElementById("searchInput")
-    .value.toLowerCase();
-  const journalListItems = document.querySelectorAll("#journalList li");
-
-  journalListItems.forEach((item) => {
-    const title = item.textContent.toLowerCase();
-    if (title.includes(searchInput)) {
-      item.style.display = "";
-    } else {
-      item.style.display = "none";
-    }
-  });
 }
 
 function displayCurrentDate() {

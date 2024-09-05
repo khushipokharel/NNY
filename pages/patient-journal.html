@@ -22,13 +22,9 @@
     <main>
       <div class="container">
         <!-- Left hand side bar for past journal entries-->
-        <div class="left-side-panel">
+        <div class="journal-left-panel">
           <div class="search-bar">
-            <input
-              type="text"
-              id="searchJournal"
-              placeholder="Search entry..."
-            />
+            <input type="text" id="searchInput" placeholder="Search entry..." />
             <button type="submit" id="searchJournal">
               <img
                 src="../assets/images/search-interface-symbol.png"
@@ -45,7 +41,7 @@
         </div>
 
         <!-- Main panel with journal details -->
-        <div class="main-panel">
+        <div class="journal-main-panel">
           <div class="add-new-post">
             <button id="addNewPostBtn" onclick="addnewpost()">New Post</button>
           </div>
@@ -163,7 +159,7 @@
         </div>
 
         <!-- Right panel -->
-        <div class="right-panel">
+        <div class="journal-right-panel">
           <div class="calendar">
             <div class="month-navigation">
               <span id="prevMonth" class="nav-arrow">&lt;</span>
