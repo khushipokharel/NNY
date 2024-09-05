@@ -45,6 +45,7 @@
           <div class="add-new-post">
             <button id="addNewPostBtn" onclick="addnewpost()">New Post</button>
           </div>
+
           <div id="newJournalModal" class="modal">
             <div class="journal-modal-content">
               <h3 style="color: rgb(161, 50, 149); text-align: center">
@@ -52,6 +53,7 @@
                 <span class="close">&times;</span>
               </h3>
               <div id="line"></div>
+
               <form id="journalForm">
                 <label for="journalTitle"></label>
                 <input
@@ -71,7 +73,12 @@
                   required
                 ></textarea>
                 <br />
-                <div id="moodInput" class="moodInput">
+                <div id="fileUpload">
+                  <label for="mediaUpload">Upload media:</label>
+                  <input type="file" id="mediaUpload" name="mediaUpload" />
+                </div>
+                <br />
+                <div id="moodInput" class="moodInput" required>
                   <label for="moodInput">Mood:</label>
                   <input
                     style="order: 10"
@@ -183,6 +190,7 @@
         </div>
       </div>
     </main>
+
     <footer>
       <div class="footer-container">
         <div class="footer-section">
