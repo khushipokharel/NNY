@@ -1,23 +1,74 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/therapist-dashboard.css" />
-    <link rel="stylesheet" href="../assets/css/therapist.css" />
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="../../assets/css/patient_profile.css">
 </head>
 <body>
-    <header>
-      <nav id="shared-header-patient">
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Patient List</a></li>
-          <li><a href="#">Group</a></li>
-          <li><a href="#">Logout</a></li>
-          <li><img src="../assets/images/therapist.jpg" alt="#" /></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="container">
+        <!-- Top-left patient profile section -->
+        <div class="patient-profile">
+            <div class="profile-header">
+                <img src="../../assets/images/patient.png" alt="Patient Photo" class="profile-photo">
+                <div class="patient-info">
+                    <h1>Zoe Ashford</h1>
+                    <p>Age: 33</p>
+                    <p>Gender: Female</p>
+                    <p>Height: 5 ft 4 in</p>
+                    <p>Weight: 56 KG</p>
+                    <p>Diagnosis: Depression</p>
+                </div>
+            </div>
 
+            <!-- Recent Journal Section -->
+            <div class="journal-section">
+                <h2>Recent Journal</h2>
+                <div class="patient-journel" id="boxContainer">
+                  <div class="patient-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.   Commodi numquam vero sed beatae nam, ipsam itaque cumque quisquam. Saepe reiciendis quasi aperiam quidem voluptatum similique id ad beatae ut fugit?
+                  </div>
+                  <div class="patient-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi numquam vero sed beatae nam, ipsam itaque cumque quisquam. Saepe reiciendis quasi aperiam quidem voluptatum similique id ad beatae ut fugit?
+                  </div>
+                  <div class="patient-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi numquam vero sed beatae nam, ipsam itaque cumque quisquam. Saepe reiciendis quasi aperiam quidem voluptatum similique id ad beatae ut fugit?
+                  </div>
+              </div>
+              <div class="navigation">
+                <button id="prevBtn" onclick="showPrevious()">Previous</button>
+                <button id="nextBtn" onclick="showNext()">Next</button>
+              </div>
+
+            </div>
+
+            <!-- Recent Mood Chart -->
+            <div class="mood-chart">
+                <h2>Recent Activity - Mood Level</h2>
+                <img src="../../assets/images/dog.jpg" alt="Mood Chart">
+            </div>
+        </div>
+
+        <!-- Notes and Group Information Section -->
+        <div class="notes-groups">
+            <h2>Groups</h2>
+            <p>Group: 3</p>
+            <p>Sessions Completed: 3</p>
+            <p>Sessions Left: 2</p>
+            <p>Personal Progression: 10%</p>
+            <p>Group Progression: 62%</p>
+
+            <h2>Notes</h2>
+            <ul>
+                <li>The patient reports persistent feelings of hopelessness for months.</li>
+                <li>Describes significant fatigue and loss of interest in previously enjoyed activities.</li>
+                <li>Expresses feelings of worthlessness and negative self-perception.</li>
+                <li>Social withdrawal observed; reduced contact with friends and family.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../assets/js/patient-profile.js"></script>
 </body>
 </html>
