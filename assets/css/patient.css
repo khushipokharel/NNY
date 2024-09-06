@@ -116,7 +116,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -288,27 +288,32 @@ body {
   height: 200px;
 }
 
-.left-side-panel {
-  width: 33.33%;
+.journal-left-panel {
+  width: 25%;
   padding-right: 20px;
   height: 70%;
 }
 
-.main-panel {
+.journal-main-panel {
   width: 50%;
   padding-right: 20px;
   height: 70%;
+}
+
+.journal-right-panel {
+  width: 25%;
 }
 
 .add-new-post {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  font-size: small;
 }
 
 .add-new-post button {
   padding: 10px 20px;
-  background-color: rgb(161, 50, 149);
+  background-color: #a13295;
   color: white;
   border: none;
   border-radius: 20px;
@@ -320,36 +325,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
-  box-shadow: 0px 0.5px 0px 1px #f0f0f0;
+  /* box-shadow: 0px 0.5px 0px 1px #f0f0f0; */
 }
-
-/* div .journalList {
-  background-color: white;
-  box-shadow: 0px 0.5px 0px 1px #f0f0f0;
-} */
-
-/* div .journal-item {
-  background-color: white;
-  padding: 5px;
-  border-radius: 10px;
-  border: #f0f0f0;
-  box-shadow: 0px 0.5px 0px 1px #f0f0f0;
-  margin: 10px;
-  font-size: medium;
-  cursor: pointer;
-} */
 
 div .journal-title {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
   border: #f0f0f0;
-  box-shadow: 0px 0.5px 0px 1px #f0f0f0;
-  margin: 10px;
+  box-shadow: 5px 5px rgba(199, 160, 196, 0.691);
+  margin: 0px;
+  margin-bottom: 10px;
   font-size: medium;
   cursor: pointer;
+  font-size: small;
 }
 
 div .journal-content {
@@ -370,9 +361,18 @@ div.journal-title:hover {
 
 .journal-details {
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
+  text-align: justify;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.journal-details p {
+  font-size: small;
+}
+
+.journal-details img {
+  max-width: 100px;
 }
 
 .search-bar {
@@ -510,7 +510,26 @@ div.journal-title:hover {
       background-color: #f0f0f0;
       cursor: pointer;
     }
+
+    .moodbtn.selected {
+      background-color: rgb(161, 50, 149);
+      color: white;
+      border: 2px solid white;
+      transform: scale(1.1);
+    }
+    .moodbtn:active {
+      transform: scale(1.05);
+    }
   }
+}
+
+#fileUpload {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .journal-popup {

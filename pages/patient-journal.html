@@ -22,13 +22,9 @@
     <main>
       <div class="container">
         <!-- Left hand side bar for past journal entries-->
-        <div class="left-side-panel">
+        <div class="journal-left-panel">
           <div class="search-bar">
-            <input
-              type="text"
-              id="searchJournal"
-              placeholder="Search entry..."
-            />
+            <input type="text" id="searchInput" placeholder="Search entry..." />
             <button type="submit" id="searchJournal">
               <img
                 src="../assets/images/search-interface-symbol.png"
@@ -45,10 +41,11 @@
         </div>
 
         <!-- Main panel with journal details -->
-        <div class="main-panel">
+        <div class="journal-main-panel">
           <div class="add-new-post">
             <button id="addNewPostBtn" onclick="addnewpost()">New Post</button>
           </div>
+
           <div id="newJournalModal" class="modal">
             <div class="journal-modal-content">
               <h3 style="color: rgb(161, 50, 149); text-align: center">
@@ -56,6 +53,7 @@
                 <span class="close">&times;</span>
               </h3>
               <div id="line"></div>
+
               <form id="journalForm">
                 <label for="journalTitle"></label>
                 <input
@@ -75,7 +73,12 @@
                   required
                 ></textarea>
                 <br />
-                <div id="moodInput" class="moodInput">
+                <div id="fileUpload">
+                  <label for="mediaUpload">Upload media:</label>
+                  <input type="file" id="mediaUpload" name="mediaUpload" />
+                </div>
+                <br />
+                <div id="moodInput" class="moodInput" required>
                   <label for="moodInput">Mood:</label>
                   <input
                     style="order: 10"
@@ -163,7 +166,7 @@
         </div>
 
         <!-- Right panel -->
-        <div class="right-panel">
+        <div class="journal-right-panel">
           <div class="calendar">
             <div class="month-navigation">
               <span id="prevMonth" class="nav-arrow">&lt;</span>
@@ -187,6 +190,7 @@
         </div>
       </div>
     </main>
+
     <footer>
       <div class="footer-container">
         <div class="footer-section">
