@@ -21,7 +21,7 @@ let journalsList = [
     id: 3,
     title: "Does my dog know how to talk?",
     date: "22/9/2024",
-    image: "../assets/images/dog.jpg",
+    image: "/assets/images/dog.jpg",
     moodlevel: 4,
     content:
       "Loneliness has become a constant companion, wrapping itself around me in ways I never imagined. Some days, the emptiness feels overwhelming, like there's no one in the world who truly understands. I see people with their friends, their families, and wonder why I can't feel that connection. It's like I'm on the outside looking in, always yearning for something I can't quite reach. But then there's Max, my sweet, loyal dog. He's the one being who seems to get me without needing any words. When the anxiety becomes too much, and I feel like I'm drowning in my own thoughts, Max is there, quietly lying next to me, offering a kind of comfort no human ever has. His soft fur under my hand, the way he looks at me with those big, trusting eyes—it's like he's saying, \"I'm here, you're not alone.\" I don't know what I'd do without him. He’s my anchor in this storm, reminding me that even in the depths of my loneliness, I’m not truly alone. I’m so grateful for him, for the unconditional love he gives me, for the way he’s always by my side, even when the world feels like it’s falling apart.",
