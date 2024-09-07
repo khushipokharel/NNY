@@ -2,6 +2,24 @@ let quotes = document.querySelectorAll(".affirmation-slider .quote");
 let dots = document.querySelectorAll(".dots .dot");
 let currentQuote = 0;
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const setGoalButton = document.getElementById('setGoalButton');
+    const newGoalModal = document.getElementById('newGoalModal');
+    const goalInput = document.getElementById('goalInput');
+    const closeButtons = document.querySelectorAll('.close');
+
+    setGoalButton.addEventListener('click', function() {
+      newGoalModal.style.display = 'block';
+      goalInput.value = ''; // Clear the form input when the modal opens
+    });
+
+    closeButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        newGoalModal.style.display = 'none';
+      });
+    });
+  });
+
 function showQuote(index) {
   quotes[currentQuote].classList.remove("active");
   dots[currentQuote].classList.remove("active");
@@ -387,3 +405,5 @@ function drawMoodChart(journals) {
 
 // Call the function to draw the chart
 drawMoodChart(journals);
+
+
