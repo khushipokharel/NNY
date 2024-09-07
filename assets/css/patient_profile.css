@@ -183,3 +183,7 @@ button:disabled {
     right: 420px;
     top: 194px;
 }
+
+canvas {
+    border: 1px solid #ddd;
+}
