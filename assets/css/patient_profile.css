@@ -117,6 +117,7 @@ body {
 .navigation {
     display: flex;
     width: 300px;
+    margin-left: 450px;
 }
 button {
     margin: 10px;
