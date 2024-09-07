@@ -24,15 +24,17 @@
     <div class="main-content">
       <h1>Patient List</h1>
       <div class="content">
-        <button class="create-group-btn" id="createGroupBtn">Create Group</button>
+        <button  class="create-group-btn" id="createGroupBtn">Create Group</button>
         <div class="search-container">
           <!-- Search input field -->
-          <input type="text" placeholder="Search..." id="search-input">
+           <form action="#" method="post">
+            <input type="text" placeholder="Search..." id="search-input">
           
-          <!-- Search button with an icon -->
-          <button type="submit">
-              <i class="fas fa-search"></i>
-          </button>
+            <!-- Search button with an icon -->
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
       </div>
         <table>
           <thead>
@@ -197,6 +199,29 @@
         </div>
       </footer>
     </div>
-    <script src="/components/therapist/therapist.js"></script>
+    <div id="popupForm" class="popup-form">
+      <div class="form-container">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <h2>Fill the Form</h2>
+          <form id="form">
+              <!-- Prefilled Fields -->
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+
+              <label for="phone">Phone:</label>
+              <input type="text" id="phone" name="phone">
+
+              <!-- Additional Fields -->
+              <label for="comments">Comments:</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+    <script src="../../components/therapist/therapist.js"></script>
   </body>
 </html>
