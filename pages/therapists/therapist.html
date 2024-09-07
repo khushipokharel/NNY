@@ -3,48 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Affirmations</title>
-    <link rel="stylesheet" href="/assets/css/shared.css" />
-    <link rel="stylesheet" href="/assets/css/affirmation.css" />
+    <title>Therapist</title>
+    <link rel="stylesheet" href="../assets/css/therapist.css" />
   </head>
   <body>
     <header>
       <nav id="shared-header-patient">
         <ul>
-          <li><a href="/pages/patient.html">Dashboard</a></li>
-          <li><a href="patient-journal.html">Jounal</a></li>
-          <li><a href="/components/patient/activity-dashboard.html">Log</a></li>
-          <li><a href="/components/patient/affirmations.html">History</a></li>
-          <li><img src="/assets/images/patient.png" alt="#" /></li>
+          <li><a href="/pages/patient-list.html">Dashboard</a></li>
+          <li><a href="/pages/patient-list.html">Patient List</a></li>
+          <li><a href="/components/therapist/group-page.html">Group</a></li>
+          <li><a href="#">Logout</a></li>
+          <li><img src="/assets/images/therapist.jpg" alt="#" /></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="container">
-        <h1>Manage Daily Affirmations</h1>
-        <form id="affirmationForm">
-          <label for="affirmationInput">Add a New Affirmation:</label>
-          <input
-            type="text"
-            id="affirmationInput"
-            name="affirmationInput"
-            placeholder="Enter your affirmation"
-            required
-          />
-          <button type="submit">Add Affirmation</button>
-        </form>
-
-        <h2>Available Affirmations</h2>
-        <ul id="affirmationList">
-          <!-- List of affirmations will be populated here -->
-        </ul>
-
-        <h2>Select Daily Affirmation</h2>
-        <select id="selectAffirmation">
-          <!-- Affirmation options will be populated here -->
-        </select>
-        <button id="setDailyAffirmation">Set as Daily Affirmation</button>
-      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+        voluptatem ratione quia harum ipsa, dolores, expedita, eius sunt dicta
+        aspernatur ab quod incidunt quam soluta reiciendis eaque voluptate
+        nesciunt. Rem aliquid id quod ipsam? Atque sit eveniet perspiciatis,
+        asperiores distinctio nemo facere repellendus dignissimos rerum eligendi
+        numquam vel, illo dolores dicta unde dolorem, inventore expedita ullam
+        amet tempora aperiam necessitatibus neque! Aliquam hic magni impedit eos
+        modi totam quos tempora ad odit ex commodi quaerat quas, voluptas
+        tempore rerum rem nihil dicta laboriosam alias fugit! Hic quos ex veniam
+        error fugiat.
+      </p>
     </main>
     <footer>
       <div class="footer-container">
@@ -92,6 +78,6 @@
         <p>Copyright &copy; 2024 Flinders University. All rights reserved.</p>
       </div>
     </footer>
-    <script src="/components/patient/affirmation.js"></script>
+    <script src="../components/therapist/therapist.js"></script>
   </body>
 </html>

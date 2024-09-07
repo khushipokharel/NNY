@@ -288,20 +288,27 @@ body {
   height: 200px;
 }
 
-.left-side-panel {
-  width: 33.33%;
+.journal-left-panel {
+  width: 25%;
   padding-right: 20px;
+  height: 70%;
 }
 
-.main-panel {
+.journal-main-panel {
   width: 50%;
   padding-right: 20px;
+  height: 70%;
+}
+
+.journal-right-panel {
+  width: 25%;
 }
 
 .add-new-post {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  font-size: small;
 }
 
 .add-new-post button {
@@ -309,46 +316,324 @@ body {
   background-color: #a13295;
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
 }
 
-.journal-list {
-  background-color: #f0f0f0;
-  padding: 10px;
+.journalList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background-color: white; */
   border-radius: 5px;
+  /* box-shadow: 0px 0.5px 0px 1px #f0f0f0; */
 }
 
-.journal-list ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.journal-list ul li {
+div .journal-title {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: #f0f0f0;
+  box-shadow: 5px 5px rgba(199, 160, 196, 0.691);
+  margin: 0px;
   margin-bottom: 10px;
+  font-size: medium;
   cursor: pointer;
+  font-size: small;
 }
 
-.journal-list ul li:hover {
-  background-color: #e0e0e0;
+div .journal-content {
+  font-size: small;
+  padding-top: 5px;
+}
+
+div .journal-date {
+  font-size: small;
+  font-style: italic;
+  color: #888;
+  padding-top: 5px;
+}
+
+div.journal-title:hover {
+  background-color: #f0f0f0;
 }
 
 .journal-details {
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
+  text-align: justify;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.journal-details p {
+  font-size: small;
+}
+
+.journal-details img {
+  max-width: 100px;
 }
 
 .search-bar {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  #searchJournal btn {
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    border: none;
+  }
+
+  #searchJournal img {
+    display: block;
+  }
 }
 
-.search-bar input {
+.journal-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #888;
   width: 100%;
-  padding: 8px;
+  max-height: fit-content;
+  max-width: 600px;
+  text-align: left;
+  border-radius: 20px;
+
+  h3 {
+    position: relative;
+    span {
+      position: absolute;
+      top: -30px;
+      right: 20px;
+    }
+  }
+}
+
+#line {
+  border: solid #f0f0f0 0.1px;
+}
+
+#journalForm {
+  display: flex;
+  flex-direction: column;
+
+  input[type="title"] {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    width: 90%;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    font-size: medium;
+  }
+
+  #journalDate {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888;
+    font-style: italic;
+  }
+
+  textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    resize: none;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+
+  input[type="submit"] {
+    align-self: flex-end;
+    padding: 5px 10px;
+    background-color: white;
+    color: rgb(161, 50, 149);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: x-small;
+    margin-top: 10px;
+    margin-right: 20px;
+    box-shadow: 0px 0.5px 0px 1px #f0f0f0;
+  }
+
+  .moodInput {
+    align-self: flex-end;
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center; */
+    margin-right: 20px;
+    margin-bottom: 5px;
+
+    label {
+      font-size: small;
+      align-self: flex-end;
+    }
+
+    .moodbtn {
+      padding: 10px;
+      margin: 2px;
+      border-radius: 50%;
+      border: solid #f0f0f0 0.1px;
+      font-size: x-small;
+      align-self: flex-end;
+      background-color: white;
+    }
+    .moodbtn:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .moodbtn.selected {
+      background-color: rgb(161, 50, 149);
+      color: white;
+      border: 2px solid white;
+      transform: scale(1.1);
+    }
+    .moodbtn:active {
+      transform: scale(1.05);
+    }
+  }
+}
+
+#fileUpload {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.journal-popup {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 8px;
+}
+
+.journal-popup h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.journal-popup p {
+  margin: 5px 0;
+}
+
+.journal-popup button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.journal-popup button:hover {
+  background-color: #0056b3;
+}
+
+#chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  border-radius: 10px;
+  background-color: #f3e7fc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* New goal modal styling */
+.new-modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 30px;
+  border: none;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.new-modal-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.new-modal-content input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.new-modal-content button[type="submit"] {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.new-modal-content button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.new-modal-content .close {
+  color: #333;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.new-modal-content .close:hover {
+  color: #000;
 }
