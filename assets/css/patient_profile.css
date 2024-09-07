@@ -9,6 +9,11 @@ body {
     background-color: #f0f0f0;
     color: #333;
 }
+h1{
+    font-size: 30px;
+    margin: 5px;
+    padding: 5px;
+}
 
 .container {
     display: flex;
@@ -126,7 +131,7 @@ body {
 button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #B79CEB;
     color: white;
     border: none;
     border-radius: 5px;
@@ -165,7 +170,7 @@ button:disabled {
     cursor: pointer;
     position:absolute;
     right: 390px;
-    top: 35px;
+    top: 100px;
 
 }
 
@@ -185,9 +190,70 @@ button:disabled {
     cursor: pointer;
     position:absolute;
     right: 420px;
-    top: 220px;
+    top: 285px;
 }
 
 canvas {
     border: 0px solid #ddd;
+}
+.calendar-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.calendar-header button {
+    background-color: #B79CEB;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+    gap: 10px;
+}
+
+.weekday {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #B79CEB;
+    color: white;
+}
+
+.day.empty {
+    visibility: hidden; /* Empty slots for alignment, like before the 1st of the month */
 }
