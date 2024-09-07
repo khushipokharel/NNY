@@ -201,3 +201,43 @@ table {
     margin: 10px;
     width: 75px;
   }
+
+  .search-container {
+    position: fixed;
+    top: 23%;
+    left: 50%;
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+
+/* Style for the search input */
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #3498db;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Style for the search button */
+.search-container button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 18px;
+}
+
+/* Hover effect for the button */
+.search-container button:hover {
+    background-color: #2980b9;
+}
+
+/* Align the icon */
+.search-container button i {
+    margin: 0;
+}
