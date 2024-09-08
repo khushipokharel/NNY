@@ -3,60 +3,13 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.sidebar {
-    width: 200px;
-    background-color: #D1A3F0;
-    height: 100vh;
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.sidebar h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 20px;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-}
-
 .main-content {
     margin-left: 220px;
     padding: 20px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-}
-
 .header h1 {
     margin: 0;
-}
-
-.therapist-info {
-    display: flex;
-    align-items: center;
-}
-
-.therapist-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 
 .content {
@@ -64,20 +17,14 @@ header {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.create-group-btn {
-    background-color: #FF6B6B;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 0;
+    max-width: 70%; 
 }
 
 table {
-    width: 100%;
+    width: max-content; 
+    margin-left: 20px; 
     border-collapse: collapse;
 }
 
@@ -105,58 +52,6 @@ select {
     border-radius: 5px;
     cursor: pointer;
 }
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.note-btn {
-    background-color: #69E069;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-.next-btn {
-    background-color: #D1A3F0;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.content {
-    margin-left: 20px;
-    padding-left: 0;
-    max-width: 70%; 
-}
-
-table {
-    width: max-content; 
-    margin-left: 20px; 
-    border-collapse: collapse;
-}
-
-.footer {
-    display: flex;
-    justify-content: flex-start; 
-    margin-top: 20px;
-}
-
-.note-btn, .next-btn {
-    margin-right: 650px; 
-}
-
-.create-group-btn {
-    margin-left: 20px;
-}
-
 
 .modal {
     display: none;
@@ -238,62 +133,22 @@ table {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-<<<<<<< HEAD
   }
-  .checkbox{
+
+.checkbox{
     transform: scale(1.5);
     margin: 10px;
     width: 75px;
   }
 
-  .search-container {
-    position: fixed;
-    top: 24%;
-    left: 50%;
-    display: flex;
-    margin-bottom: 10px;
-    
-}
-
-/* Style for the search input */
-.search-container input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: 2px solid #3498db;
-    border-radius: 5px 0 0 5px;
-    font-size: 16px;
-    outline: none;
-}
-
-/* Style for the search button */
-.search-container button {
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    font-size: 18px;
-}
-
-/* Hover effect for the button */
-.search-container button:hover {
-    background-color: #2980b9;
-}
-
-/* Align the icon */
-.search-container button i {
-    margin: 0;
-}
-/* Popup Form */
 .popup-form {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
 }
@@ -334,11 +189,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #2980b9;
 }
-=======
-    transition: background-color 0.2s;
-    margin-top: 10px;
-    align-self: center;
-}
 
 .save-group-btn:hover {
     background-color: #ff5252;
@@ -352,4 +202,55 @@ button[type="submit"]:hover {
 #groupForm input:hover {
     border-color: #ddd;
 }
->>>>>>> 80dabcdf58d120e0df06bd658735c73aac028f7f
+
+.group-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+
+.create-group-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+  
+.create-group-btn:hover {
+    background-color: #ff5252;
+}
+  
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+  
+.search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+    width: 200px;
+}
+  
+.search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; 
+}
+  
+.search-container button:hover {
+    background-color: #357abd;
+}
+  
