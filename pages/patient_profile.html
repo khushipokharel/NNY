@@ -85,10 +85,9 @@
           <div class="notes-container">
             <div class="header-with-btn">
               <h2>Notes</h2>
-              <button class="edit-btn" id="notesBtn" onclick="window.location.href='/components/therapist/patient-note.html'">
-                <img src="/assets/images/note-btn.png" alt="Edit Notes" />
+              <button class="edit-notes">
+                <i class="fas fa-edit"></i>
               </button>
-            </div>
               <ul>
                   <li>The patient reports persistent feelings of hopelessness for months.</li>
                   <li>Describes significant fatigue and loss of interest in previously enjoyed activities.</li>
@@ -167,17 +166,6 @@
         <p>Copyright &copy; 2024 Flinders University. All rights reserved.</p>
       </div>
     </footer>
-    <div id="popupForm" class="popup-form">
-      <div class="form-container">
-          <span class="close-btn" id="closePopup">&times;</span>
-          <h2>Patient Notes</h2>
-          <form id="form">
-              <!-- Prefilled Fields -->
-              <textarea name="notes" id="details" cols="30" rows="10"></textarea>
-            
-              <button type="submit" class="save-group-btn">Save Notes</button>
-          </form>
-      </div>
     <script src="../../assets/js/patient-profile.js"></script>
     <script src="../../assets/js/patient-profile-charts.js"></script>
 
