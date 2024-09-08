@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
       // Function to handle Create Group button click
       createGroupBtn.addEventListener('click', function () {
-          const selectedPatients = Array.from(document.querySelectorAll('.checkbox:checked'));
+          const selectedPatients = Array.from(document.querySelectorAll('.select-patient:checked'));
     
           // Check if any patients have been selected
           if (selectedPatients.length === 0) {
@@ -95,4 +95,20 @@ document.addEventListener('DOMContentLoaded', function () {
             groupFormModal.style.display = 'none';
           }
         });
-    
+  
+        function changeTableColor(selectElement) {
+          // Get the value of the selected option
+          const follow = selectElement.value;
+          const row = selectElement.closest('tr');
+
+          // Get the table element
+          const table = document.getElementById('myTable');
+
+          // If a color is selected, change the background color of the table
+          if (follow =='follow') {
+             row.style.backgroundColor = "#B79CEB";
+          } else {
+              // Reset to default color if no color is selected
+              row.style.backgroundColor = 'white';
+          }
+      }
