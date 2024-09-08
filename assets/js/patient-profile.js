@@ -135,7 +135,7 @@ function prevMonth() {
 generateCalendar(currentMonth, currentYear);
 
 const popupForm = document.getElementById("popupForm");
-const openPopupBtn = document.getElementById("editNotes");
+const openPopupBtn = document.getElementById("notesBtn");
 const closePopupBtn = document.getElementById("closePopup");
 
 // Function to open the popup and pre-fill the form
