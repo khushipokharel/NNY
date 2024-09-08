@@ -139,7 +139,7 @@
             <input type="number" id="availableSpace" name="availableSpace" required />
 
             <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required /> 
+            <input type="time" id="time" name="time" required />
 
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required />
@@ -202,23 +202,28 @@
     <div id="popupForm" class="popup-form">
       <div class="form-container">
           <span class="close-btn" id="closePopup">&times;</span>
-          <h2>Fill the Form</h2>
+          <h2>Group Details</h2>
           <form id="form">
               <!-- Prefilled Fields -->
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email">
-
-              <label for="phone">Phone:</label>
-              <input type="text" id="phone" name="phone">
-
-              <!-- Additional Fields -->
-              <label for="comments">Comments:</label>
-              <textarea id="comments" name="comments" rows="4"></textarea>
-
-              <button type="submit">Submit</button>
+              <label for="groupName">Group Name:</label>
+              <input type="text" id="groupName" name="groupName" required />
+  
+              <label for="participants">Participants:</label>
+              <input type="text" id="participants" name="participants" readonly />
+  
+              <label for="availableSpace">Available Space:</label>
+              <input type="number" id="availableSpace" name="availableSpace" required />
+  
+              <label for="time">Time:</label>
+              <input type="time" id="time" name="time" required />
+  
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required />
+  
+              <label for="location">Location:</label>
+              <input type="text" id="location" name="location" required />
+  
+              <button type="submit" class="save-group-btn">Save Group</button>
           </form>
       </div>
   </div>

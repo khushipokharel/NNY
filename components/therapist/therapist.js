@@ -64,14 +64,24 @@ function openPopup() {
     // const name = document.getElementById("data-name").textContent;
     // const email = document.getElementById("data-email").textContent;
     // const phone = document.getElementById("data-phone").textContent;
-    const name = "Shadin";
-    const email = "shadin@gmail.com";
-    const phone = "01234";
+    const name = "Group 1";
+    const member = "A,b,c";
+    const spots = "3";
+    const timeS = "10:30";
+    const date = "1st sept";
+    const location = "FMC";
+
 
     // Pre-fill the form with captured data
-    document.getElementById("name").value = name;
-    document.getElementById("email").value = email;
-    document.getElementById("phone").value = phone;
+    document.getElementById("groupName").value = name;
+    document.getElementById("participants").value = member;
+    document.getElementById("availableSpace").value = spots;
+    document.getElementById("time").value = timeS;
+    document.getElementById("date").value = date;
+    document.getElementById("location").value = location;
+
+
+
 
     // Show the popup
     popupForm.style.display = "flex";
