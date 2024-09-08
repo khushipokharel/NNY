@@ -6,7 +6,6 @@
     <title>Therapist Dashboard</title>
     <link rel="stylesheet" href="../../styles/therapist-dashboard.css" />
     <link rel="stylesheet" href="../../assets/css/therapist.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   </head>
   <body>
@@ -24,18 +23,18 @@
     <div class="main-content">
       <h1>Patient List</h1>
       <div class="content">
-        <button  class="create-group-btn" id="createGroupBtn">Create Group</button>
-        <div class="search-container">
-          <!-- Search input field -->
-           <form action="#" method="post">
-            <input type="text" placeholder="Search..." id="search-input">
-          
-            <!-- Search button with an icon -->
-            <button type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-      </div>
+        <!-- Create Group Button -->
+        <div class="group-search-container">
+          <button class="create-group-btn" id="createGroupBtn">Create Group</button>
+      
+          <!-- Search Box and Button -->
+          <div class="search-container">
+            <form action="#" method="post" class="search-form">
+              <input type="text" placeholder="Search..." id="search-input" />
+              <button type="submit" class="search-btn">Search</button>
+            </form>
+          </div>
+        </div>
         <table>
           <thead>
             <tr>
@@ -124,33 +123,33 @@
       </div>
 
       <!-- Group Form Modal -->
-      <div id="groupFormModal" class="modal" style="display: none;">
+      <div id="groupFormModal" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Create Group</h2>
-          <form id="groupForm">
-            <label for="groupName">Group Name:</label>
-            <input type="text" id="groupName" name="groupName" required />
-
-            <label for="participants">Participants:</label>
-            <input type="text" id="participants" name="participants" readonly />
-
-            <label for="availableSpace">Available Space:</label>
-            <input type="number" id="availableSpace" name="availableSpace" required />
-
-            <label for="time">Time:</label>
-            <input type="time" id="time" name="time" required />
-
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required />
-
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" required />
-
-            <button type="submit" class="save-group-btn">Save Group</button>
-          </form>
+            <span class="close">&times;</span>
+            <h2>Create Group</h2>
+            <form id="groupForm">
+                <label for="groupName">Group Name:</label>
+                <input type="text" id="groupName" name="groupName" required />
+    
+                <label for="participants">Participants:</label>
+                <input type="text" id="participants" name="participants" readonly />
+    
+                <label for="availableSpace">Available Space:</label>
+                <input type="number" id="availableSpace" name="availableSpace" required />
+    
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required />
+    
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required />
+    
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required />
+    
+                <button type="submit" class="save-group-btn">Save Group</button>
+            </form>
         </div>
-      </div>
+    </div>
     </div>
       <footer>
         <div class="footer-container">
