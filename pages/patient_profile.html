@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../assets/css/patient_profile.css">
     <link rel="stylesheet" href="../../assets/css/therapist.css">
     <link rel="stylesheet" href="../../styles/therapist-dashboard.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -64,18 +64,16 @@
             <div class="mood-chart">
                 <h2>Recent Activity - Mood Level</h2>
                 <canvas id="lineChart" width="600" height="400"></canvas>
-            </div>
+              </div>
         </div>
 
         <!-- Notes and Group Information Section -->
         <div class="notes-groups">
           <div class="group-container">
-            <div class="header-with-btn">
               <h2>Groups</h2>
-              <button class="edit-btn" id="groupBtn" onclick="window.location.href='/components/therapist/group-page.html'">
-                <img src="/assets/images/note-btn.png" alt="Edit Group" />
-              </button>
-            </div>
+                <button class="edit-btn">
+                  <i class="fas fa-edit"></i>
+                </button>
               <p class="patient-details">Group: 3</p>
               <p class="patient-details">Sessions Completed: 3</p>
               <p class="patient-details">Sessions Left: 2</p>
@@ -83,12 +81,11 @@
               <p class="patient-details">Group Progression: 62%</p>
           </div>
           <div class="notes-container">
-            <div class="header-with-btn">
               <h2>Notes</h2>
-              <button class="edit-notes">
-                <i class="fas fa-edit"></i>
+              <button class="edit-notes" id="editNotes">
+                 <i class="fas fa-edit"></i>
               </button>
-              <ul>
+              <ul class ="notes-details">
                   <li>The patient reports persistent feelings of hopelessness for months.</li>
                   <li>Describes significant fatigue and loss of interest in previously enjoyed activities.</li>
                   <li>Expresses feelings of worthlessness and negative self-perception.</li>
@@ -166,6 +163,17 @@
         <p>Copyright &copy; 2024 Flinders University. All rights reserved.</p>
       </div>
     </footer>
+    <div id="popupForm" class="popup-form">
+      <div class="form-container">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <h2>Patient Notes</h2>
+          <form id="form">
+              <!-- Prefilled Fields -->
+              <textarea name="notes" id="details" cols="30" rows="10"></textarea>
+            
+              <button type="submit" class="save-group-btn">Save Notes</button>
+          </form>
+      </div>
     <script src="../../assets/js/patient-profile.js"></script>
     <script src="../../assets/js/patient-profile-charts.js"></script>
 

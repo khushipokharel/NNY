@@ -154,7 +154,7 @@ button:disabled {
     margin: 10px;
     padding: 10px;
 }
-/* 
+
 
 
 .edit-btn {
@@ -191,39 +191,7 @@ button:disabled {
     position:absolute;
     right: 420px;
     top: 285px;
-} */
-/* Flexbox to align header and button on the right */
-.header-with-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
 }
-
-/* The h2 inside the header-with-btn */
-.header-with-btn h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Edit Button Styling */
-.edit-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.edit-btn img {
-    width: 20px;
-    height: 20px;
-}
-
-.edit-btn:hover img {
-    opacity: 0.8;
-}
-
 
 canvas {
     border: 0px solid #ddd;
