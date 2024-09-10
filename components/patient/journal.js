@@ -3,6 +3,7 @@ let journalsList = [
     id: 1,
     title: "Productive day at work",
     date: "24/9/2024",
+    time: "11:30 PM",
     moodlevel: 10,
     image: "",
     content:
@@ -12,6 +13,7 @@ let journalsList = [
     id: 2,
     title: "Why me?",
     date: "23/9/2024",
+    time: "10:45 PM",
     moodlevel: 3,
     image: "",
     content:
@@ -21,6 +23,7 @@ let journalsList = [
     id: 3,
     title: "Does my dog know how to talk?",
     date: "22/9/2024",
+    time: "8:45 PM",
     image: "/assets/images/dog.jpg",
     moodlevel: 4,
     content:
@@ -30,6 +33,7 @@ let journalsList = [
     id: 4,
     title: "Falling in love or is it just alcohol?",
     date: "21/9/2024",
+    time: "7:00 PM",
     moodlevel: 6,
     image: "",
     content:
@@ -62,10 +66,8 @@ function populateJournalList(journalsList) {
     // Add a substring of the content (first 10 words)
     const contentElement = document.createElement("div");
     contentElement.className = "journal-content";
-    // let summary = journal.content.split(" ").slice(0, 10).join(" ") + "...";
     let content = journal.content;
     let summary = content.split(" ").slice(0, 10).join(" ") + "...";
-    // console.log(journal.content);
     contentElement.textContent = summary;
     journalItem.appendChild(contentElement);
 
@@ -165,8 +167,8 @@ function saveJournalEntry(event) {
     content,
   };
   journalsList.push(newJournal);
-  // Update the journal list and show the new entry in the UI
-  populateJournalList(); // Ensure this function updates the displayed list
+  // Update the journal list and show the new entry
+  populateJournalList(journalList); // Ensure this function updates the displayed list
   console.log(journalsList);
   showJournalDetails(newJournal); // Show the new journal entry details
   // Clear modal and close
@@ -202,8 +204,19 @@ function displayCurrentDate() {
   dateElement.textContent = formattedDate;
 }
 
+function displayCurrentTime() {
+  const timeElement = document.getElementById("journalTime");
+  const currentDate = new Date();
+  const currentTime = currentDate.toLocaleString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  timeElement.textContent = currentTime;
+}
+
 // Call the function to display the date when the page loads
 document.addEventListener("DOMContentLoaded", displayCurrentDate);
+document.addEventListener("DOMContentLoaded", displayCurrentTime);
 
 document.getElementById("addNewPostBtn").addEventListener("click", addNewPost);
 document
