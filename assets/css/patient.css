@@ -23,10 +23,18 @@ body {
   padding-left: 20px;
 }
 
+.greetings {
+  font-size: x-large;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .affirmation-slider {
-  background-color: #f0f0f0;
+  /* background-color: none; */
   padding: 20px;
   border-radius: 10px;
+  border: solid 1px #a13295;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -50,7 +58,8 @@ body {
 
 .dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .dot {
@@ -68,7 +77,7 @@ body {
 }
 
 .goal-for-week {
-  background-color: #f0f0f0;
+  background-color: #eac7e6b0;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -82,10 +91,14 @@ body {
   color: #555;
 }
 
+#goalLink {
+  text-decoration: none;
+  color: black;
+}
+
 .goal-for-week p {
   font-size: 20px;
   color: #555;
-  background-color: #f5c6cb;
   padding: 10px;
   border-radius: 5px;
 }
@@ -93,7 +106,7 @@ body {
 #setGoalButton {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #a13295;
   color: white;
   border: none;
   border-radius: 5px;
@@ -105,7 +118,7 @@ body {
 }
 
 #setGoalButton:hover {
-  background-color: #0056b3;
+  background-color: #75246c;
 }
 
 .modal {
@@ -564,7 +577,7 @@ div.journal-title:hover {
 
 .journal-popup button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #a13295;
   color: white;
   border: none;
   border-radius: 4px;
@@ -573,7 +586,7 @@ div.journal-title:hover {
 }
 
 .journal-popup button:hover {
-  background-color: #0056b3;
+  background-color: #75246c;
 }
 
 #chartContainer {
@@ -620,7 +633,7 @@ canvas {
 
 .new-modal-content button[type="submit"] {
   padding: 12px 24px;
-  background-color: #28a745;
+  background-color: #a13295;
   color: white;
   border: none;
   border-radius: 5px;
@@ -631,7 +644,7 @@ canvas {
 }
 
 .new-modal-content button[type="submit"]:hover {
-  background-color: #218838;
+  background-color: #75246c;
 }
 
 .new-modal-content .close {
