@@ -217,6 +217,20 @@ body {
   animation: fall 4s linear infinite;
 }
 
+#completeGoal {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #a13295;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#completeGoal:hover {
+  background-color: #75246c;
+}
+
 @keyframes fall {
   0% {
     transform: translateY(-100%);
