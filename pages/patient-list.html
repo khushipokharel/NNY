@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Therapist Dashboard</title>
-    <link rel="stylesheet" href="../../styles/therapist-dashboard.css" />
+    <link rel="stylesheet" href="/assets/css/patient-list.css" />
     <link rel="stylesheet" href="../../assets/css/therapist.css" />
     <link rel="stylesheet" href="/assets/css/shared.css">
   </head>
@@ -21,7 +21,7 @@
       </nav>
     </header>
     <div class="main-content">
-      <h1>Patient List</h1>
+      <h2>Patient List</h2>
       <div class="content">
         <!-- Create Group Button -->
         <div class="group-search-container">
@@ -50,9 +50,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>Group 1</td>
+              <td><a href="group-page.html">Group 1</a></td>
               <td><a href="patient_profile.html">01</a></td>
-              <td>Minho</td>
+              <td>John Anders </td>
               <td>Depression</td>
               <td>33%</td>
               <td>
@@ -66,7 +66,7 @@
               <td>
                 <button
                   class="journal-btn"
-                  onclick="location.href='/pages/calendar.html'"
+                  onclick="location.href='/pages/patient-journal.html'"
                 >
                   View
                 </button>
@@ -74,10 +74,10 @@
               <td><input type="checkbox" name="" class="select-patient"></td>
             </tr>
             <tr>
-              <td>Group 2</td>
+              <td><a href="group-page.html">Group 2</a></td>
               <td><a href="patient_profile.html">02</a></td>
-              <td>Monkey D Luffy</td>
-              <td>Anxiety</td>
+              <td>Zoe Ashford</td>
+              <td>Generalized Anxiety Disorder</td>
               <td>7%</td>
               <td>
                 <select onchange="changeTableColor(this)">
@@ -90,7 +90,7 @@
               <td>
                 <button
                   class="journal-btn"
-                  onclick="location.href='/pages/calendar.html'"
+                  onclick="location.href='/pages/patient-journal.html'"
                 >
                   View
                 </button>
@@ -98,10 +98,10 @@
               <td><input type="checkbox" name="" class="select-patient"></td>
             </tr>
             <tr>
-              <td>Group 3</td>
+              <td><a href="group-page.html">Group 3</a></td>
               <td><a href="patient_profile.html">03</a></td>
-              <td>John Snow</td>
-              <td>PTSD</td>
+              <td>Emma Harris </td>
+              <td>Bipolar Disorder</td>
               <td>98%</td>
               <td>
                 <select onchange="changeTableColor(this)">
@@ -114,7 +114,31 @@
               <td>
                 <button
                   class="journal-btn"
-                  onclick="location.href='/pages/calendar.html'"
+                  onclick="location.href='/pages/patient-journal.html'"
+                >
+                  View
+                </button>
+              </td>
+              <td><input type="checkbox" name="patient" class="select-patient"></td>
+            </tr>
+            <tr></tr>
+              <td><a href="group-page.html">Group 2</a></td>
+              <td><a href="patient_profile.html">04</a></td>
+              <td>James Foster</td>
+              <td>Generalized Anxiety Disorder</td>
+              <td>58%</td>
+              <td>
+                <select onchange="changeTableColor(this)">
+                  <option>Active</option>
+                  <option>Inactive</option>
+                  <option>On Hold</option>
+                  <option value="follow">Follow-up</option>
+                </select>
+              </td>
+              <td>
+                <button
+                  class="journal-btn"
+                  onclick="location.href='/pages/patient-journal.html'"
                 >
                   View
                 </button>
